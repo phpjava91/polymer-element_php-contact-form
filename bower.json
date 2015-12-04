@@ -1,0 +1,12 @@
+{
+  "name": "php-contact-form",
+  "version": "1.0.0",
+  "description": "php-contact-form",
+  "main": "php-contact-form.html",
+  "keywords": [
+    "polymer","web-components"
+  ],
+  "dependencies": {
+    "polymer": "*"
+  }
+}
