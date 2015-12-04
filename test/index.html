@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+  </head>
+  <body>
+    <script>
+      WCT.loadSuites([
+        'php-contact-form.html'
+      ]);
+    </script>
+  </body>
+</html>
+## /test/php-contact-form.html
+<!doctype html>
+<html>
+  <head>
+    <title>php-contact-form</title>
+    <script src="../../webcomponentsjs/webcomponents.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../test-fixture/test-fixture-mocha.js"></script>
+    <link rel="import" href="../../polymer/polymer.html">
+
+    <link rel="import" href="../../test-fixture/test-fixture.html">
+    <link rel="import" href="../php-contact-form.html">
+  </head>
+  <body>
+    <test-fixture id="phpContactForm">
+
+      <template>
+        <php-contact-form></php-contact-form>
+      </template>
+    </test-fixture>
+    <script>
+      suite('<php-contact-form>', function () {
+        var phpContactForm;
+        phpContactForm = fixture('phpContactForm');
+        setup(function () {
+        });
+        teardown(function () {
+          //...
+        });
+        suite('basic usage', function () {
+          test('can be triggered with space', function(done) {
+            phpContactForm.addEventListener('keydown', function() {
+              done();
+            });
+          });
+          test('can be clicked', function(done) {
+            phpContactForm.addEventListener('click', function() {
+              done();
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
