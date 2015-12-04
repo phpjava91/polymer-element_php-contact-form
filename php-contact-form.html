@@ -6,3 +6,19 @@
 `<php-contact-form>` Contact Form that uses PHP to send an email
 @demo demo.html
 -->
+
+<dom-module id="php-contact-form">
+  <template>
+    <style>:host {display:inline-block;}</style>
+    <paper-input type=text label='name' value='{{name}}'></paper-input>
+    <paper-input type=text label='email' value='{{email}}'></paper-input>
+    <paper-input type=text label='message' value='{{message}}'></paper-input>
+    <paper-button on-tap="send">Send</paper-button>
+    <iron-ajax auto url="/send.php" handle-as="json"></iron-ajax>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "php-contact-form"
+  });
+</script>
